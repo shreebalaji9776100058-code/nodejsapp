@@ -17,5 +17,10 @@
   "license": "ISC",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "axios": "^1.7.2",
+    "xlsx": "^0.18.5"
   }
 }
