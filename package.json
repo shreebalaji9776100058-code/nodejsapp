@@ -1,11 +1,13 @@
 {
   "name": "hostinger-node-mysql-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node.js + Express + MySQL Starter for Hostinger",
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node app.js",
-    "dev": "node --watch app.js"
+    "dev": "node --watch app.js",
+    "build": "echo \"No build required\""
   },
   "keywords": [
     "nodejs",
