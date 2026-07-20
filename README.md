@@ -1,51 +1,203 @@
-# Node.js Hello World on Hostinger
+# Hostinger Node.js + MySQL Starter
 
-This is a lightweight, zero-dependency Node.js application tailored for deployment on **Hostinger Web Hosting**.
+A production-ready Node.js application built for Hostinger Web Hosting using Express.js and MySQL.
 
 ---
 
-## 📁 File Structure
+## Features
 
-```text
-├── app.js          # Core application logic & HTML rendering
-├── package.json    # Node.js metadata & start scripts
-├── .env            # Local environment configuration variables
-└── README.md       # Setup & deployment guide
+- Express.js Server
+- MySQL Database Connection
+- Environment Variables (.env)
+- Axios HTTP Requests
+- Excel Export (SheetJS)
+- REST API Examples
+- Production Ready
+- Hostinger Compatible
+
+---
+
+## Project Structure
+
+```
+project/
+│
+├── app.js
+├── db.js
+├── package.json
+├── .env
+└── README.md
 ```
 
 ---
 
-## 🛠️ Local Setup & Development
+## Requirements
 
-1. Ensure **Node.js** (v18 or higher) is installed on your local system.
-2. Start the application locally:
-   ```bash
-   npm start
-   ```
-   *For live reloading during development:*
-   ```bash
-   npm run dev
-   ```
-3. Open your browser and navigate to `http://localhost:3000`.
+- Node.js 18+
+- MySQL Database
+- Hostinger Node.js Hosting
 
 ---
 
-## 🚀 Hostinger Deployment Steps
+## Installation
 
-1. **Log in to Hostinger hPanel**:
-   - Go to your hosting control panel and select your domain.
+Install dependencies
 
-2. **Configure Node.js Application**:
-   - Locate the **Node.js** section under *Advanced* / *Hosting*.
-   - Click **Create Application** (or edit existing settings):
-     - **Node.js Version**: Select `18.x` or `20.x`.
-     - **Application Mode**: `Production`
-     - **Application Root**: `public_html` (or your assigned directory).
-     - **Application Startup File**: `app.js`
+```bash
+npm install
+```
 
-3. **Upload Application Files**:
-   - Extract the contents of this ZIP archive into your Application Root directory using Hostinger **File Manager** or **FTP**.
+Run the project
 
-4. **Start/Restart Application**:
-   - Click **Run npm install** (if prompted/needed).
-   - Click **Restart Application** in the Hostinger hPanel dashboard.
+```bash
+npm start
+```
+
+Development Mode
+
+```bash
+npm run dev
+```
+
+---
+
+## Environment Variables
+
+Create a `.env` file.
+
+```env
+PORT=3000
+
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=your_database_user
+DB_PASSWORD=your_password
+DB_NAME=your_database
+```
+
+---
+
+## API Routes
+
+### Home
+
+```
+GET /
+```
+
+Returns the welcome page.
+
+---
+
+### Test Database
+
+```
+GET /db-test
+```
+
+Example Response
+
+```json
+{
+  "success": true,
+  "database": "Connected",
+  "result": 2
+}
+```
+
+---
+
+### Get Users
+
+```
+GET /users
+```
+
+Returns the first 50 users.
+
+---
+
+### Create User
+
+```
+POST /users
+```
+
+Body
+
+```json
+{
+  "name": "John",
+  "email": "john@example.com"
+}
+```
+
+---
+
+### Fetch External API
+
+```
+GET /fetch-data
+```
+
+Downloads sample user data using Axios.
+
+---
+
+### Export Excel
+
+```
+GET /export-excel
+```
+
+Downloads the users table as an Excel file.
+
+---
+
+## Deployment on Hostinger
+
+1. Upload all project files.
+2. Run:
+
+```bash
+npm install
+```
+
+3. Set:
+
+- Startup File: `app.js`
+- Node Version: 18+
+
+4. Restart the application.
+
+5. Visit:
+
+```
+https://yourdomain.com/db-test
+```
+
+If the response is
+
+```json
+{
+  "success": true,
+  "database": "Connected",
+  "result": 2
+}
+```
+
+your MySQL connection is working successfully.
+
+---
+
+## Install Required Packages
+
+```bash
+npm install express mysql2 dotenv axios xlsx
+```
+
+---
+
+## License
+
+ISC
