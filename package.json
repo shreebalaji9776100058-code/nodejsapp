@@ -1,18 +1,17 @@
 {
-  "name": "hostinger-node-hello-world",
+  "name": "hostinger-node-mysql-app",
   "version": "1.0.0",
-  "description": "A simple Node.js Hello World application configured for Hostinger hosting",
+  "description": "Node.js + Express + MySQL Starter for Hostinger",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "node --watch app.js",
-    "build": "echo \"No build step required\""
+    "dev": "node --watch app.js"
   },
   "keywords": [
     "nodejs",
-    "hostinger",
-    "hello-world",
-    "deployment"
+    "express",
+    "mysql",
+    "hostinger"
   ],
   "author": "",
   "license": "ISC",
@@ -20,9 +19,10 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "express": "^4.19.2",
     "axios": "^1.7.2",
-    "xlsx": "^0.18.5",
-    "mysql2": "^3.10.0"
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.0",
+    "xlsx": "^0.18.5"
   }
 }
