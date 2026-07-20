@@ -1,0 +1,21 @@
+{
+  "name": "hostinger-node-hello-world",
+  "version": "1.0.0",
+  "description": "A simple Node.js Hello World application configured for Hostinger hosting",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "keywords": [
+    "nodejs",
+    "hostinger",
+    "hello-world",
+    "deployment"
+  ],
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
