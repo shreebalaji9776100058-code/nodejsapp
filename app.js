@@ -2,7 +2,7 @@ const http = require('http');
 
 // Hostinger assigns a dynamic port via process.env.PORT. 
 // We fallback to 3000 for local testing.
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 const server = http.createServer((req, res) => {
   // Set response headers
